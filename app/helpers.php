@@ -12,4 +12,3 @@ function app_status(int $appId): string { $q=db()->prepare('SELECT status FROM d
 function sync_application(int $id): string { $status=app_status($id); db()->prepare('UPDATE applications SET status=?,updated_at=NOW() WHERE id=?')->execute([$status,$id]); return $status; }
 function current_application(): ?array { if (!user()) return null; $q=db()->prepare('SELECT * FROM applications WHERE user_id=?'); $q->execute([user()['id']]); return $q->fetch() ?: null; }
 function url(string $page, array $params=[]): string { return '?' . http_build_query(['page'=>$page]+$params); }
-

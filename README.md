@@ -59,4 +59,3 @@ After installation, use two browser profiles (candidate and administrator) and c
 7. Compare dashboard figures to the applications/documents in the database.
 
 This workspace did not have PHP, MySQL, or XAMPP available during implementation, so this checklist has not been executed here. Run it after configuring a local XAMPP instance.
-
